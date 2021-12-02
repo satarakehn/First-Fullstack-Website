@@ -1,0 +1,128 @@
+.header{
+    font-family: 'M PLUS 1', sans-serif;
+    letter-spacing: 50x;
+    text-align: center;
+    color: #c56c3a;
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: 'M PLUS 1', sans-serif;
+    letter-spacing: 60x;
+      text-align: right;
+      color: white;
+      background-color: #fad28d;
+  }
+  
+
+  ul {
+    font-family: 'M PLUS 1', sans-serif;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #c56c3a;
+      letter-spacing: 5px; 
+      box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.9);
+      font-weight: bold;
+    }
+    
+    li {
+      font-family: 'M PLUS 1', sans-serif;
+      float: left;
+    }
+    
+    li a {
+      font-family: 'M PLUS 1', sans-serif;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+li a:hover {
+        font-family: 'M PLUS 1', sans-serif;
+        color:black;
+        cursor: pointer;
+    }
+  
+  h3 {
+    padding:60;
+    padding-right: 50;
+    font-family: 'M PLUS 1', sans-serif;
+    text-align-last: center;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 10x;
+    color: black;
+  }
+
+  input {
+    font-family: 'M PLUS 1', sans-serif;
+    text-align-last: center;
+    text-align: center;
+    font-size: 15px;
+    color: #c56c3a;
+    background-size: 200% auto;        
+    box-shadow: 0 0 20px #eee;
+    padding: 5px 20px;
+  }
+  
+  button{
+    font-family: 'M PLUS 1', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 10x;
+    color: white;
+    border-radius: 25px;
+    background: white;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-color: #c6663b;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.9);
+    cursor: pointer;
+    transition: 0.5s;
+  
+  }
+  
+   img {
+    text-align: center;
+    margin: auto;
+    display: block;
+    opacity: 70%;
+  }
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.6);
+
+}
+#website-name {
+    border-style: solid;
+    border-width: 5px;
+    width: 400px;
+    height: 100px;
+    padding: 30px;
+    margin: auto;
+    top: 20px;
+    text-align: center;
+    font-family: 'Tangerine', serif;
+    font-size: 60px;
+    text-shadow: 2px 2px #000000;
+    letter-spacing: 5px; 
+    background-image: url("../img/3791145.jpg");
+    background-size: 480px 180px;
+    background-position: center;
+    box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.9);
+  }
+
+
+  
+  
+  
+

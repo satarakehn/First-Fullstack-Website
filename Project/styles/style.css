@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans";
+    box-sizing: border-box;
+}
+:root {
+    --background-color: #05f2;
+    --background-overlay-color: #fff;
+    --text-color: #000;
+    --highlight-color: #70f;
+}
+.topnav {
+    background-color: #c56c3a;
+    overflow: hidden;
+  }
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    letter-spacing: 5px
+}
+body {
+    background: var(--background-color);
+}
+.app {
+    display: flex;
+    height: 100vh;
+    overflow: auto;
+}
+header {
+    width: 150px;
+    height: 100%;
+    align-self: flex-start;
+    background: var(--background-overlay-color);
+    padding: 37.5px;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+header::-webkit-scrollbar,
+.events::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+a {
+    color: inherit;
+}
+header nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 24px;
+    margin-bottom: 50px;
+    transition: background 0.2s, color 0.2s;
+}
+header nav a:not([data-selected]) {
+    color: #f2ac34;
+}
+header nav a[data-selected],
+header nav a:hover {
+    color: #f2ac34  ;
+    background: #05f2;
+}
+header nav svg {
+    width: 36px;
+}
+header nav ul {
+    list-style: none;
+}
+h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+.calendar {
+    padding: 50px;
+    width: 850px;
+}
+.calendar::after {
+    content: "";
+    display: block;
+    height: 50px;
+}
+.calendar-layout {
+    padding: 50px;
+    background: white;
+    border-radius: 24px;
+    display: flex;
+    width: 750px;
+    flex-wrap: wrap;
+}
+.calendar-layout h2 {
+    flex: 1 100%;
+}
+.calendar-layout span {
+    width: calc(100% / 14);
+    display: block;
+    margin: calc(100% / 28);
+    padding: calc(100% / 56) calc(100% / 28);
+    border-radius: 100px;
+    text-indent: -7.5px;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+.calendar-layout span:not(.null):hover,
+.calendar-layout span:not(.null)[data-selected] {
+    background: #bbd2ff;
+    color: #05f;
+}
+.events {
+    width: calc(100% - 850px - 150px);
+    height: 100%;
+    background: #ed9b38 ;
+    color: #fff;
+    padding: 50px;
+    overflow: scroll;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.events ul {
+    padding: 50px 0;
+    list-style: none;
+    width: 100%;
+}
+.events ul li {
+    padding: 25px;
+    background: #fff2;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 24px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+.events ul li:hover {
+    background: #fff3;
+}
+.events ul li .time {
+    display: inline-block;
+    width: 75px;
+}
+.show-header {
+    display: none;
+}
+.top-search {
+    background: var(--background-overlay-color);
+    border-radius: 100px;
+    display: flex;
+    margin-bottom: 50px;
+}
+.top-search svg {
+    width: 24px;
+    height: 24px;
+    margin: 12px;
+    stroke: #ccc !important;
+}
+.top-search input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 12px;
+    padding-left: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    width: calc(100% - 48px);
+    outline: none;
+    color: inherit;
+}
+.top-search input::placeholder {
+    color: #ccc;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+@media (max-width: 1400px) {
+    header {
+        width: 100px;
+        padding: 25px;
+    }
+    header ul li a {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 25px;
+    }
+    header ul li a svg {
+        width: 24px;
+    }
+    .calendar {
+        padding: 50px;
+        width: 600px;
+    }
+    .calendar-layout {
+        width: 500px;
+    }
+    .events {
+        width: calc(100% - 600px - 100px);
+    }
+}

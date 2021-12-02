@@ -1,0 +1,70 @@
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/todos.css">
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="todos">Home</a>
+      <a href = "calendar">Calendar</a>
+      <a href="about" style="float:right">About</a>
+    </div>
+    
+    </div>
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px">My To Do List</h2>
+      <form action="/todos/add"  method="post">
+        <label for="taskInput">Task Input</label>
+        <input type="text" name="taskInput" id="myInput" placeholder="Format: PHYS 2100, assignment name, 2021-11-30">
+        <button class="addBtn">Add</button>
+      </form>
+    </div>
+     <div class="row">
+      <div class="column" style="background-color:#b9936c;">
+        <h2 style="color:white"> Class</h2>
+        <ul id="myUL">
+          <li> CSCI 2400</li>
+          <%var class_names = ""%>
+          <% if(data){
+              data.forEach(item=>{
+                class_names += '<li>'+item.class_name+'</li>';
+              }) 
+            } 
+            else (class_names += "Department and number of class")
+           %> 
+          <%- class_names %>
+        </ul>
+      </div>
+      <div class="column" style="background-color:#99795a;">
+        <h2 style="color:white"> Assignment </h2>
+        <ul id="myUL1">
+          <li> Bomb Lab <li>
+          <%var assignment_names = ""%>
+          <% if(data){
+              data.forEach(item=>{
+                assignment_names += '<li>'+item.assignment_name+'</li>';
+              }) 
+            } 
+            else (assignment_names += "Description of your task")
+           %> 
+          <%- assignment_names %>
+        </ul>
+      </div>
+      <div class="column" style="background-color:#755d44;">
+        <h2 style="color:white"> Date</h2>
+        <ul id="myUL2">
+          <li> Today <li>
+          <%var due_dates = ""%>
+          <% if(data){
+              data.forEach(item=>{
+                due_dates += '<li>'+item.due_date+'</li>';
+              }) 
+            } else (due_dates += "Enter a YYYY-MM-DD format deadline")
+           %> 
+          <%- due_dates %>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+  <script src = "../scripts/scripts.js"></script>

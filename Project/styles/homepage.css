@@ -1,0 +1,156 @@
+.header{
+  font-family: 'M PLUS 1', sans-serif;
+  letter-spacing: 50x;
+  text-align: center;
+  color: #c56c3a;
+}
+
+body {
+  font-family: 'M PLUS 1', sans-serif;
+  letter-spacing: 60x;
+    text-align: center;
+    color: white;
+    background: linear-gradient(150deg, #ed9b38 60%, #f2ac34 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+
+p {
+    font-size: 24px;
+    font-family: 'M PLUS 1', sans-serif;    
+}
+
+#card-title{
+  text-shadow: 2px 2px #000000;
+}
+
+#website-name {
+  border-style: solid;
+  border-width: 5px;
+  width: 400px;
+  height: 100px;
+  padding: 30px;
+  margin: auto;
+  top: 20px;
+  text-align: center;
+  font-family: 'Tangerine', serif;
+  font-size: 80px;
+  text-shadow: 2px 2px #000000;
+  letter-spacing: 5px; 
+  background-image: url("../img/3791145.jpg");
+  background-size: 480px 180px;
+  background-position: center;
+  box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.9);
+}
+
+#card-text {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  display: grid;
+  vertical-align: middle;
+  grid-template-areas: "image" "text";
+  font-family: roboto;
+  border-radius: 18px;
+  background: #c6663b;
+  box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.9);
+  text-align: center;
+  transition: 0.5 ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.6);
+}
+
+.card-image {
+  grid-area: image;
+}
+
+.card-text {
+  grid-area: text;
+}
+
+.column {
+  width: 25%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none!important;
+  color: rgb(228, 220, 220);
+}
+
+ul {
+  font-family: 'M PLUS 1', sans-serif;
+  list-style-type: none;
+  font-size: 15px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: 5px; 
+    background-color: #c56c3a;
+    box-shadow: 5px 5px 15px rgba(66, 66, 64, 0.9);
+    font-weight: bold;
+  }
+  
+  li {
+    font-family: 'M PLUS 1', sans-serif;
+    float: left;
+  }
+  
+  li a {
+    font-family: 'M PLUS 1', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    font-family: 'M PLUS 1', sans-serif;
+    color: black;
+  }
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+    background: #d48fa6;
+}
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #f5ae99;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}

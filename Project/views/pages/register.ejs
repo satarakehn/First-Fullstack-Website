@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>REGISTRATION</title>
+	<link rel="stylesheet" type="text/css" href="../styles/register.css">
+	<link href='https://fonts.googleapis.com/css?family=Actor|Tangerine' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap" rel="stylesheet">
+</head>
+<body> 
+	<div class="header">
+		<h1>GET ER' DONE</h1>
+	</div>
+	<ul>
+		<li><a href="/">HOME</a></li>
+		<li><a href="login">LOGIN</a></li>
+		<li><a href="register">SIGN UP</a></li>
+		<li style="float:right"><a class="active" href="about">ABOUT</a></li>
+	  </ul>
+	  <br>
+	  <h1 id = "website-name">Register Below!</h1>
+<br>
+	<form action="/register/new"  method="post" class = "main-form">
+		<label for="firstName">First Name</label>
+	<br>
+		<input type="text" name="firstName" id="firstName" placeholder="Enter First Name" required="required"/>
+	<br>
+		<label for= "lastName">Last Name</label>
+	<br>
+		<input type="text" name="lastName" id="lastName" placeholder="Enter Last Name" required="required"/>
+	<br>
+		<label for= "emailAddress">Email address</label>
+	<br>
+		<input type="email" name="emailAddress" id="emailAddress" placeholder="Enter email" required="required"/>
+	<br>
+		<label for="studentUniversity">Your University</label>
+	<br>
+		<input type="text"  id="studentUniversity" name="studentUniversity" placeholder="Enter your University" required="required"/>
+	<br>
+	<br>
+		<label for="passwordFirst">Password</label>
+	<br>
+	<h4>
+		<div id="message" style="display: block">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            <p id="match" class="invalid">Password and Confirm Password Match</p>
+        </div>
+		<input type="password"  id="passwordFirst" name="passwordFirst" placeholder="Password" required="required"/>
+	<br>
+		<label for="passwordConfirm">Confirm Password</label>
+	<br>
+		<input type="password"  id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password" required="required"/>
+	<br>
+	</h4>
+		<button id = "submit_button" disabled>SUBMIT</button>
+	</form>
+	<footer>
+		<img src="../img/new.png" alt="alternatetext">
+	</footer>
+</body>
+<script src = "../scripts/scripts.js"></script>
+<script type = "text/javascript">
+	window.onload = checkPassword();
+</script>
+</html>
